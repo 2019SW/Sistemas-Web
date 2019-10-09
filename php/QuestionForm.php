@@ -32,7 +32,7 @@
            
       Tema de la pregunta (*): <input type="text" id="tema" /> <div id="temaDiv" style="color:red;"></div><br> <br>
            
-      <button id="boton" type="button" value="Enviar" /> Enviar</button> <img height=1 width=30/>
+      <input id="submit" type="submit" value="Enviar" /></input> <img height=1 width=30/>
       <input type="reset" value="Borrar" />
             <div id="error" style="color:red;"></div> <br>
             <div id="correcto" style="color:green;"></div>

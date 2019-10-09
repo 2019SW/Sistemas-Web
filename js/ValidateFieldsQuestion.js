@@ -1,8 +1,6 @@
 $(document).ready(function(){
  
-				$("#boton").click(function(){
-
-
+				$("#fquestion").submit(function(e){
 								var ok = true;
 								var resultado = "";
 								var correo = $("#correo").val();
@@ -27,7 +25,10 @@ $(document).ready(function(){
 								} else $("#temaDiv").empty();
  
 								if (ok) $("#correcto").text("¡Se ha añadido de forma satisfactoria!");
-								else $("#correcto").empty();
+								else {
+								e.preventDefault();
+									$("#correcto").empty();
+								}
 				});
  
 });
