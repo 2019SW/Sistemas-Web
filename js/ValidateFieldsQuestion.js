@@ -12,17 +12,17 @@ $(document).ready(function(){
 								} else $("#error").empty();
  
 								if (!(/[a-z]+\d{3}@ikasle\.ehu\.(es|eus)/.test(correo) ||
-								(/[a-z]+\.[a-z]+@ehu\.(es|eus)/.test(correo))))
+								(/[a-z]+(\.[a-z]+)?@ehu\.(es|eus)/.test(correo))))
 								{
 												ok = false;
 												$("#correDiv").text("El mail introducido es incorrecto");
 								} else $("#correDiv").empty();
 				
-								if (($("#tema").val().length < 10))
+								if (($("#enunciado").val().length < 10))
 								{
 												ok = false;
-												$("#temaDiv").text("El tema ha de ser de un mínimo de 10 carácteres.");
-								} else $("#temaDiv").empty();
+												$("#enunciadoDiv").text("El enunciado ha de ser de un mínimo de 10 carácteres.");
+								} else $("#enunciadoDiv").empty();
  
 								if (ok) $("#correcto").text("¡Se ha añadido de forma satisfactoria!");
 								else {
