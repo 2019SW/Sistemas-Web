@@ -7,19 +7,16 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
- 
+                <?php include 'DbConfig.php'?>
                 <?php
-                $servername = "localhost";
-                $database = "quiz";
-                $username = "root";
-                $password = "";
+               
                 // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $database);
+                $conn = mysqli_connect($server, $user, $pass, $basededatos);
                 // Check connection
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
-                                
+                               
                 $sql = "SELECT * FROM preguntas";
                 if ($r = mysqli_query($conn, $sql)) {
                     $resultset=array();  //Associative Array
