@@ -1,13 +1,39 @@
 <div id='page-wrap'>
 <header class='main' id='h1'>
-  <span class="right"><a href="registro">Registro</a></span>
-        <span class="right"><a href="login">Login</a></span>
-        <span class="right" style="display:none;"><a href="/logout">Logout</a></span>
+   <?php 
 
+  if (!isset($_GET['correo'])){
+
+  	echo "<span class='right'><a href='SignUp.php'>Registro </a></span>";
+  	echo "<span class='right'><a href='LogIn.php'>Login</a></span>";	
+  }
+   else {
+
+  	echo "<span class='right'><a href='LogOut.php'>Logout</a></span>";
+
+  }
+  ?>
 </header>
 <nav class='main' id='n1' role='navigation'>
-  <span><a href='Layout.php'>Inicio</a></span>
-  <span><a href='QuestionForm.php'> Insertar Pregunta</a></span>
-  <span><a href='Credits.php'>Creditos</a></span>
-</nav>
+  
+  <?php 
+  if (!isset($_GET['correo']))echo "<span><a href='Layout.php'>Inicio</a></span>";
+  ?>
+  <?php 
 
+  // Por alguna razón no me coge el valor de la variable correo, pero funciona por isset devuelve true
+
+  if (isset($_GET['correo'])){
+
+  	echo "<span><a href='Layout.php?correo='".$_GET['correo']."'>Inicio</a></span>";
+  	echo "<span><a href='QuestionForm.php?correo='".$_GET['correo']."'> Insertar Pregunta</a></span>";
+  	echo "<span><a href='ShowQuestions.php?correo='".$_GET['correo']."'> Ver Preguntas</a></span>";	
+  	echo "<span><a href='Credits.php?correo='".$_GET['correo']."'> Creditos</a></span>";	
+  }
+  ?>
+  
+  <?php 
+  if (!isset($_GET['correo']))echo "<span><a href='Credits.php'>Creditos</a></span>";
+  ?>
+  
+</nav>
