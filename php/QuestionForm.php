@@ -11,7 +11,7 @@
       <br />
       <h2>Formule su pregunta:</h2>
  
-      <form id='fquestion' name='fquestion' method='POST' action='AddQuestion.php'>
+      <?php echo "<form id='fquestion' name='fquestion' method='POST' action='AddQuestion.php?".$_GET['correo']."'>" ?>
       <br />
       <br />
  

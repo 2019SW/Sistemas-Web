@@ -18,11 +18,11 @@
         $tema = $_POST['tema'];
 
         if(empty($correo) or empty($enunciado) or empty($incorrecta1) or empty($incorrecta2) or empty($incorrecta3) or empty($correcta) or empty($tema)){
-          $error = "No todos los campos están llenos" //.= para concatenar
+          $error = "No todos los campos están llenos"; //.= para concatenar
         } else if(!preg_match('/[a-z]+\d{3}@ikasle\.ehu\.(es|eus)/',$correo) && !preg_match('/[a-z]+(\.[a-z]+)?@ehu\.(es|eus)/', $correo)){
-          $error = "El email introducido es incorrecto"
+          $error = "El email introducido es incorrecto";
         } else if(strlen($enunciado) < 10){
-          $error = "El enunciado ha de ser de un mínimo de 10 carácteres"
+          $error = "El enunciado ha de ser de un mínimo de 10 carácteres";
         } else {
 
             // Create connection

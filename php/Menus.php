@@ -7,10 +7,10 @@
   	echo "<span class='right'><a href='SignUp.php'>Registro </a></span>";
   	echo "<span class='right'><a href='LogIn.php'>Login</a></span>";	
   }
-   else {
+	 else {
 
   	echo "<span class='right'><a href='LogOut.php'>Logout</a></span>";
-
+		//echo "<span class='right'><div>".$_GET['correo']."</div></span>";	
   }
   ?>
 </header>
@@ -24,8 +24,8 @@
   // Por alguna razón no me coge el valor de la variable correo, pero funciona por isset devuelve true
 
   if (isset($_GET['correo'])){
-
-  	echo "<span><a href='Layout.php?correo='".$_GET['correo']."'>Inicio</a></span>";
+		$message = $_GET['correo'];
+  	echo "<span><a href='Layout.php?correo='".$message."'>Inicio</a></span>";
   	echo "<span><a href='QuestionForm.php?correo='".$_GET['correo']."'> Insertar Pregunta</a></span>";
   	echo "<span><a href='ShowQuestions.php?correo='".$_GET['correo']."'> Ver Preguntas</a></span>";	
   	echo "<span><a href='Credits.php?correo='".$_GET['correo']."'> Creditos</a></span>";	
