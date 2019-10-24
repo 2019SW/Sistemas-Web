@@ -10,7 +10,7 @@
 	 else {
 
   	echo "<span class='right'><a href='LogOut.php'>Logout</a></span>";
-		//echo "<span class='right'><div>".$_GET['correo']."</div></span>";	
+		echo "<span class='right'><div>".$_GET['correo']."</div></span>";	
   }
   ?>
 </header>
@@ -25,10 +25,10 @@
 
   if (isset($_GET['correo'])){
 		$message = $_GET['correo'];
-  	echo "<span><a href='Layout.php?correo='".$message."'>Inicio</a></span>";
-  	echo "<span><a href='QuestionForm.php?correo='".$_GET['correo']."'> Insertar Pregunta</a></span>";
-  	echo "<span><a href='ShowQuestions.php?correo='".$_GET['correo']."'> Ver Preguntas</a></span>";	
-  	echo "<span><a href='Credits.php?correo='".$_GET['correo']."'> Creditos</a></span>";	
+  	echo "<span><a href='Layout.php?correo=".$_GET['correo']."'>Inicio</a></span>";
+  	echo "<span><a href='QuestionForm.php?correo=".$_GET['correo']."'> Insertar Pregunta</a></span>";
+  	echo "<span><a href='ShowQuestions.php?correo=".$_GET['correo']."'> Ver Preguntas</a></span>";	
+  	echo "<span><a href='Credits.php?correo=".$_GET['correo']."'> Creditos</a></span>";	
   }
   ?>
   

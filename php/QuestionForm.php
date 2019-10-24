@@ -11,11 +11,11 @@
       <br />
       <h2>Formule su pregunta:</h2>
  
-      <?php echo "<form id='fquestion' name='fquestion' method='POST' action='AddQuestion.php?".$_GET['correo']."'>" ?>
+      <?php echo "<form id='fquestion' name='fquestion' method='POST' action='AddQuestion.php?correo=".$_GET['correo']."'>" ?>
       <br />
       <br />
  
-      Dirección de correo ehu (*): <input type="text" id="correo" name="correo" /><div id="correDiv" style="color:red;"></div><br>
+      <?php echo 'Dirección de correo ehu (*): <input type="text" id="correo" name="correo" value="'.$_GET['correo'].'" readonly/><div id="correDiv" style="color:red;"></div><br>'?>
       Enunciado de la pregunta (*): <input type="text" id="enunciado" name="enunciado" /><div id="enunciadoDiv" style="color:red;"></div><br>
       Respuesta correcta (*): <input type="text" id="correcta" name="correcta" /><div id="correctaDiv" style="color:red;"></div><br>
       Respuesta incorrecta (*): <input type="text" id="incorrecta1" name="incorrecta1"/><div id="incorrecta1Div" style="color:red;"></div><br>
