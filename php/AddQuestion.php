@@ -2,6 +2,7 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+	3
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
@@ -41,6 +42,24 @@
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }
           mysqli_close($conn);
+					
+					//Se añade al fichero XML
+					$xml = simplexml_load_file('../xml/Questions.xml');
+					$pregunta = $xml->addChild('assessmentItem');
+					$pregunta->addAttribute('subject', $tema);
+					$pregunta->addAttribute('author', $correo);
+					
+					$itemBody = $pregunta->addChild('itemBody');
+					$itemBody = $pregunta->addChild('p', $enunciado);
+					
+					$correctResponse = $pregunta->addChild('correctResponse');
+					$correctResponse->addChild('value', $correcta);
+					
+					$incorrectResponses = $pregunta->addChild('incorrectResponses');
+					$incorrectResponses->addChild('value', $incorrecta1);
+					$incorrectResponses->addChild('value', $incorrecta2);
+					$incorrectResponses->addChild('value', $incorrecta3);
+					$xml->asXML('../xml/Questions.xml');
         }
       ?>
       </div>
