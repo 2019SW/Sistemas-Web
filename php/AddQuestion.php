@@ -50,7 +50,7 @@
 					$pregunta->addAttribute('author', $correo);
 					
 					$itemBody = $pregunta->addChild('itemBody');
-					$itemBody = $pregunta->addChild('p', $enunciado);
+					$itemBody ->addChild('p', $enunciado);
 					
 					$correctResponse = $pregunta->addChild('correctResponse');
 					$correctResponse->addChild('value', $correcta);
@@ -59,7 +59,20 @@
 					$incorrectResponses->addChild('value', $incorrecta1);
 					$incorrectResponses->addChild('value', $incorrecta2);
 					$incorrectResponses->addChild('value', $incorrecta3);
-					$xml->asXML('../xml/Questions.xml');
+					$xmlContent = $xml->asXML('../xml/Questions.xml');
+
+          function formatXml($simpleXMLElement)
+          {
+            $xmlDocument = new DOMDocument('1.0');
+            $xmlDocument->preserveWhiteSpace = false;
+            $xmlDocument->formatOutput = true;
+            $xmlDocument->loadXML($simpleXMLElement->asXML());
+
+            return $xmlDocument->saveXML();
+          }
+
+          $xmlContent = formatXml($xml);
+
         }
       ?>
       </div>
