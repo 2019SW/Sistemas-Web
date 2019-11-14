@@ -1,5 +1,5 @@
 <?php
-$nube=0; //1 para la nube
+$nube=1; //1 para local
 if ($nube==1){
     $server="localhost";
     $user="root";

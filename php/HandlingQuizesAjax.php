@@ -2,11 +2,12 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+	<script type="text/javascript" src="../js/AddQuestionsAjax.js"></script>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
-    <div>
+    <div id='formPreguntas'>
  
       <br />
       <h2>Formule su pregunta:</h2>
@@ -33,14 +34,15 @@
       <input id="addq" type="button" value="Agregar Pregunta" onclick="addQuestion()" /></input> <img height=1 width=30/>
       <input id="showq" type="button" value="Mostrar Preguntas" onclick="showQuestion()" /></input> <img height=1 width=30/>
       <input type="reset" value="Borrar" />
-            <div id="error" style="color:red;"></div> <br>
-            <div id="correcto" style="color:green;"></div>
+            <div id="resultado" ></div>
      
  
  
       </form>
  
     </div>
+		<div id = 'mostrarPreguntas'>
+		</div>
   </section>
   <?php include '../html/Footer.html' ?>
 </body>
