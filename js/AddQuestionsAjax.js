@@ -7,10 +7,18 @@ function addQuestion(){
 	// Supongo que vamos a pedir el fichero XML? Aunque suene lo mas inseguro del mundo?
 	
 		if (xhttp.readyState==4 && this.status == 200){
-			alert (xhttp.responseText); //visualizar el documento xml como string
+			alert (xhttp.responseXML); //visualizar el documento xml como string
+			
+			/*
+			xmlDoc = xhr.responseXML; //reponseXML returns an XML document and we assign it to xmlDoc
+			titles = xmlDoc.getElementsByTagName("title"); //get XML element collection with the content of "title"
+			document.getElementById('div1').innerHTML = titles[0].childNodes[0].nodeValue; //get first value with "title" element
+			*/
+			
+			
 			var obj = document.getElementById('resultado');
 			var respuesta = xhttp.responseXML;
-			obj.innerHTML = respuesta.getElementsByTagName('titulo')[0].childNodes[0].nodeValue;
+			obj.innerHTML = respuesta;
 		}
 	};
 

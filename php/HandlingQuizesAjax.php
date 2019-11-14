@@ -34,7 +34,8 @@
       <input id="addq" type="button" value="Agregar Pregunta" onclick="addQuestion()" /></input> <img height=1 width=30/>
       <input id="showq" type="button" value="Mostrar Preguntas" onclick="showQuestion()" /></input> <img height=1 width=30/>
       <input type="reset" value="Borrar" />
-            <div id="resultado" ></div>
+      
+			<div id="resultado" ></div>
      
  
  
