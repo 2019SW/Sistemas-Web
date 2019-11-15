@@ -26,7 +26,7 @@
   if (isset($_GET['correo'])){
 		$message = $_GET['correo'];
   	echo "<span><a href='Layout.php?correo=".$_GET['correo']."'>Inicio</a></span>";
-  	echo "<span><a href='QuestionForm.php?correo=".$_GET['correo']."'> Insertar Pregunta</a></span>";
+  	echo "<span><a href='HandlingQuizesAjax.php?correo=".$_GET['correo']."'> Insertar Pregunta (AJAX)</a></span>";
   	echo "<span><a href='ShowQuestions.php?correo=".$_GET['correo']."'> Ver Preguntas</a></span>";
     echo "<span><a href='ShowxmlQuestions.php?correo=".$_GET['correo']."'> Ver Preguntas (XML) </a></span>";	
   	echo "<span><a href='Credits.php?correo=".$_GET['correo']."'> Creditos</a></span>";	
