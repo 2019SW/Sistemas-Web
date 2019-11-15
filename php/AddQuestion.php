@@ -2,7 +2,6 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
-	3
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
@@ -35,8 +34,8 @@
          
           $sql = "INSERT INTO preguntas (correo, enunciado, correcta, incorrecta1, incorrecta2, incorrecta3, complejidad, tema) VALUES ('". $_POST["correo"] ."', '". $_POST["enunciado"] ."', '". $_POST["correcta"] ."', '". $_POST["incorrecta1"] ."', '". $_POST["incorrecta2"] ."', '". $_POST["incorrecta3"] ."', '". $_POST["complejidad"] ."', '". $_POST["tema"] ."')";
           if (mysqli_query($conn, $sql)) {
-                $aviso = "Pregunta añadida con éxito. Puede ver las preguntas existentes en el siguiente link: ";
-                      echo"<br><a href='ShowQuestions.php?correo=".$_GET["correo"]."'>Ver entradas</a>";
+                $aviso = "Pregunta añadida con éxito";
+                      echo"<br><a href='ShowQuestions.php?correo=".$_GET["correo"]."'>. Puede ver las preguntas existentes si pinchas aquí</a>";
           } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }

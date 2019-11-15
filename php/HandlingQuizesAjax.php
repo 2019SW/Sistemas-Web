@@ -3,10 +3,14 @@
 <head>
   <?php include '../html/Head.html'?>
 	<script type="text/javascript" src="../js/AddQuestionsAjax.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/ShowQuestionsAjax.js"></script>
+	<script type="text/javascript" src="../js/CountQuestionsAjax.js"></script>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
+	<div id='preguntas'></div>
     <div id='formPreguntas'>
  
       <br />
@@ -32,11 +36,11 @@
       Tema de la pregunta (*): <input type="text" id="tema" name="tema"/> <div id="temaDiv" style="color:red;"></div><br> <br>
            
       <input id="addq" type="button" value="Agregar Pregunta" onclick="addQuestion()" /></input> <img height=1 width=30/>
-      <input id="showq" type="button" value="Mostrar Preguntas" onclick="showQuestion()" /></input> <img height=1 width=30/>
+      <input id="showq" type="button" value="Mostrar Preguntas" /></input> <img height=1 width=30/>
       <input type="reset" value="Borrar" />
       
 			<div id="resultado" ></div>
-     
+			<div id="tablaXML"></div>
  
  
       </form>

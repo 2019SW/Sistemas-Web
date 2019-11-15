@@ -7,7 +7,6 @@ function addQuestion(){
 	// Supongo que vamos a pedir el fichero XML? Aunque suene lo mas inseguro del mundo?
 	
 		if (xhttp.readyState==4 && this.status == 200){
-			alert (xhttp.responseXML); //visualizar el documento xml como string
 			
 			/*
 			xmlDoc = xhr.responseXML; //reponseXML returns an XML document and we assign it to xmlDoc
@@ -15,15 +14,18 @@ function addQuestion(){
 			document.getElementById('div1').innerHTML = titles[0].childNodes[0].nodeValue; //get first value with "title" element
 			*/
 			
-			
 			var obj = document.getElementById('resultado');
-			var respuesta = xhttp.responseXML;
-			obj.innerHTML = respuesta;
+			var respuesta = xhttp.responseText;
+			var pos1 = respuesta.search('<div id="aviso">') + 16;
+			var pos2 = respuesta.indexOf("</div>", 1221);
+			var res = respuesta.substring(pos1, pos2);
+			obj.innerHTML = res;	
+			
+			
+			console.log(pos1, pos2, res);
 		}
 	};
-
-
-
+	
 	// Hay que asignar las variables cogiendo los campos del formulario
 	
 	var correo 			= document.getElementById("correo").value;
@@ -35,7 +37,7 @@ function addQuestion(){
 	var complejidad = document.getElementById("complejidad").value;
 	var tema 				= document.getElementById("tema").value;
 	
-	xhttp.open("POST","addQuestion.php",true);
+	xhttp.open("POST","addQuestion.php?correo=" + correo,true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("correo="+correo+"&"+"enunciado="+enunciado+"&"+"correcta="+correcta+"&"+"incorrecta1="+incorrecta1+"&"+"incorrecta2="+incorrecta2+"&"+"incorrecta3="+incorrecta3+"&"+"complejidad="+complejidad+"&"+"tema="+tema); //Poner en el send los parametros del email
 
