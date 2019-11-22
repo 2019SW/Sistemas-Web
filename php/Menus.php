@@ -28,7 +28,7 @@
   	echo "<span><a href='Layout.php?correo=".$_GET['correo']."'>Inicio</a></span>";
   	echo "<span><a href='HandlingQuizesAjax.php?correo=".$_GET['correo']."'> Insertar Pregunta (AJAX)</a></span>";
   	echo "<span><a href='ShowQuestions.php?correo=".$_GET['correo']."'> Ver Preguntas</a></span>";
-    echo "<span><a href='ShowxmlQuestions.php?correo=".$_GET['correo']."'> Ver Preguntas (XML) </a></span>";	
+    echo "<span><a href='ShowXmlQuestions.php?correo=".$_GET['correo']."'> Ver Preguntas (XML) </a></span>";	
   	echo "<span><a href='Credits.php?correo=".$_GET['correo']."'> Creditos</a></span>";	
   }
   ?>

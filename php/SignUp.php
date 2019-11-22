@@ -2,6 +2,8 @@
 <html>
 <head>
   <?php include '../html/Head.html'?>
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../js/validateAjax.js"></script>
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
@@ -45,6 +47,7 @@
   }
 
   ?>
+
   <section class="main" id="s1">
     <div>
  
@@ -59,12 +62,13 @@
         <option value="alumno">Alumno</option>
         <option value="profesor">Profesor</option>
       </select> <br><br>
-      Dirección de correo ehu asociada: <input type="text" id="correo" name="correo" /><div id="correDiv" style="color:red;"></div><br>
+      Dirección de correo ehu asociada: <input type="text" id="correo" name="correo" /><div id="correDiv" style="color:red;"></div><div id="correoVip" style="color:red;"></div><br>
       Nombre y Apellido/s (Introduzca al menos dos palabras): <input type="text" id="nombre" name="nombre" /><div id="nombreDiv" style="color:red;"></div><br>
-      Contraseña (min 6 caracteres): <input type="password" id="correcta" name="password" /><div id="correctaDiv" style="color:red;"></div><br>
-      Repita la contraseña: <input type="password" id="incorrecta1" name="password1"/><div id="incorrecta1Div" style="color:red;"></div><br>
+      Contraseña (min 6 caracteres): <input type="password" id="password" name="password" /><div id="correctaDiv" style="color:red;"></div><div id="passwordCorrecta" style="color:red;"></div><br>
+      Repita la contraseña: <input type="password" id="password1" name="password1"/><div id="incorrecta1Div" style="color:red;"></div><br>
+
            
-      <input id="submit" type="submit" value="Registrase" /></input> <img height=1 width=30/>
+      <input id="submit" type="submit" disabled="disabled" value="Registrase" /></input> <img height=1 width=30/>
       
       </form>
  
