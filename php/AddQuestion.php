@@ -5,6 +5,12 @@
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
+	<?php
+		if ($_SESSION['var'] != 'usuario'){
+			header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+			exit;
+		}
+	?>
   <section class="main" id="s1">
     <?php include 'DbConfig.php'?>
     <?php

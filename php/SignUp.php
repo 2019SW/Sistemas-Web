@@ -35,7 +35,7 @@
           }
            
          
-          $sql = "INSERT INTO usuarios (usuario, correo, nombre, password) VALUES ('". $_POST["usuario"] ."', '". $_POST["correo"] ."', '". $_POST["nombre"] ."','". $_POST["password"] ."')";
+          $sql = "INSERT INTO usuarios (usuario, correo, nombre, password, bloqueado) VALUES ('". $_POST["usuario"] ."', '". $_POST["correo"] ."', '". $_POST["nombre"] ."','". $_POST["password"] ."', '0')";
           if (mysqli_query($conn, $sql)) {
                 echo '<script>alert("Usuario creado con éxito, redirigiendo...");parent.location = "Layout.php?correo='.$_POST['correo'].'"</script>';
           } else {

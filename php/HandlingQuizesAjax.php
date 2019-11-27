@@ -9,6 +9,12 @@
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
+	<?php
+		if ($_SESSION['var'] != 'usuario'){
+			header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+			exit;
+		}
+	?>
   <section class="main" id="s1">
 	<div id='preguntas'></div>
     <div id='formPreguntas'>
@@ -20,7 +26,7 @@
       <br />
       <br />
  
-      <?php echo 'Dirección de correo ehu (*): <input type="text" id="correo" name="correo" value="'.$_GET['correo'].'" readonly/><div id="correDiv" style="color:red;"></div><br>'?>
+      <?php echo 'Dirección de correo ehu (*): <input type="text" id="correo" name="correo" value="'.$_COOKIE['correo'].'" readonly/><div id="correDiv" style="color:red;"></div><br>'?>
       Enunciado de la pregunta (*): <input type="text" id="enunciado" name="enunciado" /><div id="enunciadoDiv" style="color:red;"></div><br>
       Respuesta correcta (*): <input type="text" id="correcta" name="correcta" /><div id="correctaDiv" style="color:red;"></div><br>
       Respuesta incorrecta (*): <input type="text" id="incorrecta1" name="incorrecta1"/><div id="incorrecta1Div" style="color:red;"></div><br>
