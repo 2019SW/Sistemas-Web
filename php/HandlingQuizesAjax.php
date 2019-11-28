@@ -1,3 +1,10 @@
+<?php session_start(); ?>
+<?php
+	if ($_SESSION['var'] != 'usuario'){
+		header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+		exit;
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +16,7 @@
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
-	<?php
-		if ($_SESSION['var'] != 'usuario'){
-			header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-			exit;
-		}
-	?>
+
   <section class="main" id="s1">
 	<div id='preguntas'></div>
     <div id='formPreguntas'>

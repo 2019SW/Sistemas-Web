@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <?php include '../html/Head.html'?>
-</head>
-<body>
-  <?php include '../php/Menus.php' ?>
-  <?php include 'DbConfig.php'?>
-  <?php
+<?php session_start();?>
+<?php include 'DbConfig.php'?>
+<?php
   if (isset($_POST['correo'])){
  
         $correo = $_POST['correo'];
@@ -56,6 +50,14 @@
  
  
   ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <?php include '../html/Head.html'?>
+</head>
+<body>
+  <?php include '../php/Menus.php' ?>
+  
   <section class="main" id="s1">
     <div>
  
