@@ -41,7 +41,8 @@
         <option value="3">Alta</option>
       </select> <br><br>
            
-      Tema de la pregunta (*): <input type="text" id="tema" name="tema"/> <div id="temaDiv" style="color:red;"></div><br> <br>
+      Tema de la pregunta (*): <input type="text" id="tema" name="tema"/> <div id="temaDiv" style="color:red;"></div><br>
+			Imagen (*): <input id="imagen" accept="image/*" name="imagen" size="30" type="file">  <br><br>
            
       <input id="addq" type="button" value="Agregar Pregunta" onclick="addQuestion()" /></input> <img height=1 width=30/>
       <input id="showq" type="button" value="Mostrar Preguntas" /></input> <img height=1 width=30/>
