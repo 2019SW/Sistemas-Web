@@ -31,12 +31,16 @@
 
     echo "<span><a href='Layout.php'>Inicio</a></span>";
     echo "<span><a href='HandlingQuizesAjax.php'>Gestionar Preguntas</a></span>";
+    echo "<span><a href='modificarContrasena.php'> Modificar contraseña</a></span>";
     echo "<span><a href='Credits.php'> Creditos</a></span>";
   }
   ?>
 
   <?php
-  if (!isset($_SESSION['var']))echo "<span><a href='Credits.php'>Creditos</a></span>";
+  if (!isset($_SESSION['var'])){
+    echo "<span><a href='Credits.php'>Creditos</a></span>";
+    echo "<span><a href='modificarContrasena.php'> Modificar contraseña</a></span>";
+  }
   ?>
 
 </nav>

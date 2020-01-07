@@ -3,7 +3,10 @@
 
   $loginURL = $gClient->createAuthUrl();
  ?>
+
 <?php include 'DbConfig.php'?>
+
+
 
 <!DOCTYPE html>
 <html>
